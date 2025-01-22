@@ -2,19 +2,6 @@
 import streamlit as st
 from snowflake.snowpark.functions import col
 
-import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
-
-import streamlit as st
-
-# Test if 'Snowflake' key exists in the secrets
-if "Snowflake" in st.secrets:
-    st.write("Snowflake secrets are configured correctly!")
-    # Optionally, print out a part of the Snowflake secrets to debug (e.g., user name)
-    st.write(f"User: {st.secrets['Snowflake']['user']}")
-else:
-    st.write("No Snowflake secrets found. Please check your Streamlit secrets.")
 
 
 # Write directly to the app
