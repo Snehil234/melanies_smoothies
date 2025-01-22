@@ -2,6 +2,17 @@
 import streamlit as st
 from snowflake.snowpark.functions import col
 
+import streamlit as st
+
+# Test if 'Snowflake' key exists in the secrets
+if "Snowflake" in st.secrets:
+    st.write("Snowflake secrets are configured correctly!")
+    # Optionally, print out a part of the Snowflake secrets to debug (e.g., user name)
+    st.write(f"User: {st.secrets['Snowflake']['user']}")
+else:
+    st.write("No Snowflake secrets found. Please check your Streamlit secrets.")
+
+
 # Write directly to the app
 st.title("Customize your own smoothie :cup_with_straw:")
 st.write("""Choose the fruits you want for your custom smoothie.""")
