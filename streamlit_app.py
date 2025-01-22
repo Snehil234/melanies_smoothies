@@ -13,6 +13,7 @@ st.write(
 name_on_order = st.text_input('Name on smoothie:')
 st.write('The name on your Smoothie will be', name_on_order)
 
+cnx=st.session("Snowflake")
 
 
 session = cnx.session()
@@ -42,4 +43,3 @@ if ingredients_list:
         st.success('Your Smoothie is ordered!', icon="✅")
 
 
-cnx=st.session("Snowflake")
