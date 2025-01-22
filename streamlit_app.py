@@ -3,7 +3,6 @@ import streamlit as st
 from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
-cnx=st.session("Snowflake")
 
 # Write directly to the app
 st.title("Customize your own smoothie :cup_with_straw:")
@@ -44,3 +43,4 @@ if ingredients_list:
         st.success('Your Smoothie is ordered!', icon="✅")
 
 
+cnx=st.session("Snowflake")
