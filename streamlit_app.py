@@ -38,7 +38,7 @@ if ingredients_list:
     
     if time_to_insert:
         # Using parameterized queries to avoid SQL injection
-        session.sql(my_insert_stmt, (ingredients_string, name_on_order)).collect()
+        session.sql(my_insert_stmt,(ingredients_string, name_on_order)).collect()
         st.success('Your Smoothie is ordered!', icon="✅")
 
 
