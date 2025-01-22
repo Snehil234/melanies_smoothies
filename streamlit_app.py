@@ -28,7 +28,7 @@ if ingredients_list:
     ingredients_string = ', '.join(ingredients_list)
     
     # Insert SQL statement
-       my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
+    my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
             values ('""" + ingredients_string + """','"""+name_on_order+ """')"""
     
     # Create a button to submit the order
