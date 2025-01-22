@@ -1,6 +1,5 @@
 # Import python packages
 import streamlit as st
-cnx=st.session("Snowflake")
 
 from snowflake.snowpark.functions import col
 
